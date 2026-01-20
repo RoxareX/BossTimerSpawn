@@ -1,0 +1,19 @@
+
+@MyTex = PatchStyle(TexturePath: "BossTimerSpawnGUIBackground.png");
+
+Group {
+  LayoutMode: Left;
+  Anchor: (Top: 20, Height: 60);
+
+  Group #MyPanel {
+    Background: @MyTex;
+    Anchor: (Left: 20, Top: 20, Width: 400, Height: 400);
+    Padding: (Horizontal: 20, Vertical: 10);
+    LayoutMode: Left;
+
+    Label #MyLabel {
+      Style: (FontSize: 32, Alignment: Center);
+      Text: "MyText";
+    }
+  }
+}

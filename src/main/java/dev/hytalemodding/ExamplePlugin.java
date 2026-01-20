@@ -18,5 +18,6 @@ public class ExamplePlugin extends JavaPlugin {
     protected void setup() {
         this.getCommandRegistry().registerCommand(new ExampleCommand("example", "An example command"));
         this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, ExampleEvent::onPlayerReady);
+
     }
 }
