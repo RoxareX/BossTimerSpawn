@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HyUI-0.5.0-all">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../HytaleServer/mods/HyUI-0.5.0-all.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
