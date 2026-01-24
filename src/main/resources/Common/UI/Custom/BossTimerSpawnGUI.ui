@@ -3,7 +3,7 @@
 
 Group {
   LayoutMode: Left;
-  Anchor: (Top: 20, Height: 60);
+  Anchor: (Top: 100, Height: 160);
 
   Group #MyPanel {
     Background: @MyTex;

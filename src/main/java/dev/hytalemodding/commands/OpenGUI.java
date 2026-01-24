@@ -15,12 +15,13 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.util.EventTitleUtil;
 import com.hypixel.hytale.server.core.util.NotificationUtil;
+import dev.hytalemodding.ui.MyUI;
 
 import javax.annotation.Nonnull;
 
-public class ExampleCommand extends AbstractPlayerCommand {
+public class OpenGUI extends AbstractPlayerCommand {
 
-    public ExampleCommand(@Nonnull String name, @Nonnull String description) {
+    public OpenGUI(@Nonnull String name, @Nonnull String description) {
         super(name, description);
     }
 
@@ -28,11 +29,7 @@ public class ExampleCommand extends AbstractPlayerCommand {
     protected void execute(@Nonnull CommandContext commandContext, @Nonnull Store<EntityStore> store, @Nonnull Ref<EntityStore> ref, @Nonnull PlayerRef playerRef, @Nonnull World world) {
         Player player = commandContext.senderAs(Player.class);
 
-        commandContext.sendMessage(Message.raw("Hello World!"));
+        player.getPageManager().openCustomPage(ref, store, new MyUI(playerRef));
 
-//        ItemWithAllMetadata iconItem = new ItemStack("Weapon_Sword_Mithril", 1).toPacket();
-//        NotificationUtil.sendNotification(packetHandler, primaryMessage, secondaryMessage, iconItem);
-
-//        EventTitleUtil.showEventTitleToPlayer(playerRef, primaryMessage, secondaryMessage, true, null, 5, 1, 1);
     }
 }
